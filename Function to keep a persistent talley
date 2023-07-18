@@ -1,0 +1,45 @@
+yes_count = 0
+no_count = 0
+
+def Function_1():
+    global yes_count, no_count  # Specify that these variables are global
+
+    sentence = "Start CPOT Server!"
+    print(sentence)
+
+    answer = input("All 3 Server Health Indicators turn green? (Yes/No): ")
+
+    if answer.lower() == "yes":
+        yes_count += 1
+        print("Proceeding...")
+    elif answer.lower() == "no":
+        no_count += 1
+        print("Aborting...")
+    else:
+        print("Invalid input!")
+
+    print("Yes count:", yes_count)
+    print("No count:", no_count)
+
+def Function_2():
+    global yes_count, no_count  # Specify that these variables are global
+
+    sentence = "Start CPOT Client!"
+    print(sentence)
+
+    answer = input("Facilitator is logged into the client? (Yes/No): ")
+
+    if answer.lower() == "yes":
+        yes_count += 1
+        print("Proceeding...")
+    elif answer.lower() == "no":
+        no_count += 1
+        print("Aborting...")
+    else:
+        print("Invalid input!")
+
+    print("Yes count:", yes_count)
+    print("No count:", no_count)
+
+Function_1()
+Function_2()
